@@ -1,0 +1,21 @@
+{
+  "name": "artcraft-company-profile",
+  "version": "1.0.0",
+  "description": "ArtCraft themed company profile with Express, Prisma and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:status": "prisma migrate status"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.3"
+  }
+}

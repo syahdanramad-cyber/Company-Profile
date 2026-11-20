@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PT Contoh Jaya — Admin</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="topbar"><a class="brand-mark" href="/" aria-label="ArtCraft"><span>CJ</span></a><div style="padding-left:18px;font:11px var(--mono);letter-spacing:2px;color:#aaa">PT CONTOH JAYA / PANEL ADMIN</div><span style="margin-left:auto;padding:0 20px;font:10px var(--mono);color:#777">ADMIN</span></header>
+<main class="admin-wrap">
+  <div class="admin-top"><div><div class="eyebrow">PT Contoh Jaya / Pengelolaan</div><h1 style="font-size:36px;letter-spacing:-2px;margin:8px 0">Kelola layanan.</h1><p class="status">Tambah, ubah, dan hapus layanan yang ditampilkan pada website.</p></div><div><span id="nama-admin" class="status">Admin</span> &nbsp; <button class="btn" id="tombol-logout" type="button">Logout ↗</button></div></div>
+  <section class="admin-panel"><div class="eyebrow">01 / Form layanan</div><h2>Detail layanan</h2>
+    <form id="form-layanan" class="admin-form"><input type="hidden" name="id">
+      <div class="field"><label for="nama">Nama layanan</label><input id="nama" name="nama" required maxlength="100"></div>
+      <div class="field"><label for="deskripsi">Deskripsi</label><textarea id="deskripsi" name="deskripsi" rows="3"></textarea></div>
+      <button type="submit" id="tombol-simpan" class="btn btn-primary">Tambah layanan +</button> <button type="button" id="tombol-batal" class="btn" hidden>Cancel</button><p id="status-admin" class="status" role="status"></p>
+    </form>
+  </section>
+  <section class="admin-panel"><div class="eyebrow">02 / Daftar layanan</div><h2>Daftar layanan</h2><div style="overflow-x:auto"><table class="admin-table"><thead><tr><th>Name</th><th>Deskripsi</th><th>Actions</th></tr></thead><tbody id="tabel-layanan"></tbody></table></div></section>
+</main><script src="/admin.js"></script></body></html>

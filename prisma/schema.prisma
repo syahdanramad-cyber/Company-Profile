@@ -1,0 +1,36 @@
+// Sumber kebenaran struktur database. Ubah di sini, lalu jalankan: npx prisma migrate dev --name <nama-perubahan>
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model services {
+    id        Int     @id @default(autoincrement())
+    nama      String  @db.VarChar(100)
+    deskripsi String? @db.Text
+}
+
+model users {
+    id        Int      @id @default(autoincrement())
+    nama      String
+    email     String   @unique
+    password  String?
+    role      String   @default("user") @db.VarChar(20)
+    createdAt DateTime @default(now())
+
+    @@map("User")
+}
+
+model pesan {
+    id         Int      @id @default(autoincrement())
+    nama       String   @db.VarChar(100)
+    email      String   @db.VarChar(150)
+    isi        String   @db.Text
+    created_at DateTime @default(now()) @db.Timestamp(0)
+
+    @@map("pesan")
+}
